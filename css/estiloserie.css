@@ -1,0 +1,215 @@
+
+.my-4, .my-3, li, p{
+  color: white;
+}
+
+#genero {
+  color: #EF0808;
+}
+#code{
+  color: white;
+  font-family: 'Julius Sans One', sans-serif;
+}
+#contenido {
+  color: rgb(255, 255, 255);
+
+  border: none;
+  font-size: 1em;
+  border-color: none;
+  position: relative;
+  font-family: 'Julius Sans One', sans-serif;
+  }
+  #menu {
+    background: #000;
+  
+  }
+  .imageBox{
+    position: relative;
+    padding: 0px auto;
+    margin: 0px auto;
+  
+   overflow: hidden;
+    border-radius: 2px;
+    max-width: 222px;
+    max-height: 90px;
+  }
+  .imageBox2{
+    position: relative;
+    padding: 0px auto;
+    margin: 0px auto;
+  
+   overflow: hidden;
+    border-radius: 2px;
+    max-width: 480px;
+    max-height: 290px;
+  }
+  .imageBox:hover img{
+    -webkit-box-shadow: inset 98px 0px 87px 34px rgba(0,0,0,0.36);
+    -moz-box-shadow: inset 98px 0px 87px 34px rgba(0,0,0,0.36);
+    box-shadow: inset 98px 0px 87px 34px rgba(0,0,0,0.36);
+  }
+  h2{
+  
+    color: #8D8E8B;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+  }
+  .imageBox h3{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    transform: translateY(-0%);
+    text-align: center;
+    width: 100%;
+  
+    color: #fff;
+    text-shadow: 0 4px 5px rgba(0,0,0,0.9);
+    transition: .5s;
+  }
+  .imageBox:hover h3{
+    top: 20%;
+    transform: translateY(-50%);
+    
+  }
+
+
+    
+  @media (max-width: 575.98px) {
+
+    .imageBox{
+      position: relative;
+      top: 0px;
+      padding: 0px auto;
+      margin: 2px auto;
+
+     overflow: hidden;
+      border-radius: 0px;
+      max-width: 180px;
+      max-height: 200px;
+    }
+    .imageBox2{
+      position: relative;
+      padding: 0px auto;
+      margin: 4px auto;
+    
+     overflow: hidden;
+      border-radius: 2px;
+      max-width: 410px;
+      max-height: 290px;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+    .imageBox{
+      position: relative;
+
+      padding: 0px auto;
+      margin: 0px auto;
+
+      overflow: hidden;
+      border-radius: 0px;
+      max-width: 290px;
+      max-height: 190px;
+    }
+    .imageBox2{
+      position: relative;
+      padding: 0px auto;
+      margin: 3px auto;
+    
+     overflow: hidden;
+      border-radius: 2px;
+      max-width: 390px;
+      max-height: 290px;
+    }
+}
+
+.py-5{
+  background-color: black;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .imageBox{
+      position: relative;
+      top: 0px;
+      padding: 0px auto;
+      margin: 8px auto;
+
+     overflow: hidden;
+      border-radius: 0px;
+      max-width: 320px;
+      max-height: 170px;
+    }
+    .imageBox2{
+      position: relative;
+      padding: 0px auto;
+      margin: 4px auto;
+    
+     overflow: hidden;
+      border-radius: 2px;
+      max-width: 290px;
+      max-height: 290px;
+    }
+   }
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+.imageBox{
+  position: relative;
+  top: 0px;
+  padding: 0px auto;
+  margin: 0px auto;
+
+ overflow: hidden;
+  border-radius: 0px;
+  max-width: 200px;
+  max-height: 150px;
+}
+.imageBox2{
+  position: relative;
+  padding: 0px auto;
+  margin: 3px auto;
+
+ overflow: hidden;
+  border-radius: 2px;
+  max-width: 490px;
+  max-height: 290px;
+}
+}
+
+
+@media (min-width: 1200px) {
+
+.imageBox{
+position: relative;
+top: 0px;
+padding: 0px auto;
+margin: 5px auto;
+
+overflow: hidden;
+border-radius: 0px;
+max-width: 215px;
+max-height: 150px;
+
+}
+.imageBox2{
+  position: relative;
+  padding: 0px auto;
+  margin: 15px auto;
+
+ overflow: hidden;
+  border-radius: 2px;
+  max-width: 420px;
+  max-height: 290px;
+}
+
+
+}
