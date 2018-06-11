@@ -1,0 +1,510 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Chapiflix | Chappie </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../../css/boo.css" media="screen">
+  <link rel="stylesheet" href="../../css/per.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.png">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="../../css/estilo.css">
+  <script src="../../js/jq.js"></script>
+  <script src="../../js/bjs.js"></script>
+  <style>
+    .black_text {
+      color: #000;
+      background-color: #f3f3f3;
+    }
+
+    .blue_text {
+      color: #0080ff;
+    }
+  </style>
+</head>
+
+<body style="background-color:#000;">
+  <!-- TOP HEADING SECTION -->
+  <style>
+    .nav_transparent {
+      padding: 10px 0px 10px;
+      border: 1px;
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .nav_dark {
+      background-color: #000;
+      padding: 10px;
+    }
+  </style>
+  <div class="navbar navbar-default navbar-fixed-top nav_transparent">
+    <div class="container" style=" width: 100%;">
+      <div class="navbar-header">
+        <a href="../../index.html" class="navbar-brand">
+          <img src="../../images/log2.png" style="padding: 0; height: 23px;margin: 0px;" />
+        </a>
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse" id="navbar-main">
+        <ul class="nav navbar-nav">
+          <!-- MOVIES GENRE WISE-->
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="" style="color: #e50914; font-weight: bold;">
+              Género
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="themes">
+              <li>
+                <a href="#">
+                  Acción </a>
+              </li>
+              <li>
+                <a href="#">
+                  Comedia </a>
+              </li>
+              <li>
+                <a href="#">
+                  Terror </a>
+              </li>
+              <li>
+                <a href="#">
+                  Ciencia Ficción </a>
+              </li>
+              <li>
+                <a href="#">
+                  Superheroes </a>
+              </li>
+              <li>
+                <a href="#">
+                  Suspenso </a>
+              </li>
+              <li>
+                <a href="#">
+                  Romance </a>
+              </li>
+              <li>
+                <a href="#">
+                  Drama </a>
+              </li>
+              <li>
+                <a href="#">
+                  Crimen </a>
+              </li>
+              <div class="dropdown-divider"></div>
+              <li>
+                <a href="#">
+                  Peliculas por año </a>
+              </li>
+            </ul>
+          </li>
+          <!-- MY LIST -->
+          <li>
+            <a target="_blank" href="https://www.paypal.me/CanalesAlcalde/1">Donar</a>
+          </li>
+        </ul>
+        <!-- PROFILE, ACCOUNT SECTION -->
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="padding:10px;">
+              <img src="../../images/user.png" style="height:30px;" /> Chappie
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="themes">
+              <!--<li class="divider"></li>-->
+              <!-- SHOW ADMIN LINK IF ADMIN LOGGED IN -->
+              <li>
+                <a href="#">Perfil</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="../../home.html">Cerrar sessión</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- SEARCH FORM -->
+        <form class="navbar-form navbar-right" method="post" action="#">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Peliculas y series" style="background-color: #000; border: 1px solid #0a0a0a;"
+              name="search_key">
+          </div>
+          <button type="submit" class="btn btn-default">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div style="padding: 0px;"></div>
+
+  <style>
+    .btn_opaque {
+      font-size: 20px;
+      border: 1px solid #939393;
+      text-decoration: none;
+      margin: 10px;
+      background-color: rgba(0, 0, 0, 0.74);
+      color: #fff;
+    }
+
+    .btn_opaque:hover {
+      border: 1px solid #939393;
+      text-decoration: none;
+      background-color: rgba(57, 57, 57, 0.74);
+      color: #fff;
+    }
+
+    .video_cover {
+      position: relative;
+      padding-bottom: 30px;
+    }
+
+    .video_cover:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url(../../images/chappie.jpg);
+      width: 100%;
+      height: 100%;
+      opacity: 0.2;
+      z-index: -1;
+      background-size: cover;
+    }
+
+    .select_black {
+      background-color: #000;
+      height: 45px;
+      padding: 12px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .profile_manage {
+      font-size: 25px;
+      border: 1px solid #ccc;
+      padding: 5px 30px;
+      text-decoration: none;
+    }
+
+    .profile_manage:hover {
+      font-size: 25px;
+      border: 1px solid #fff;
+      padding: 5px 30px;
+      text-decoration: none;
+      color: #fff;
+    }
+  </style>
+  <!-- VIDEO PLAYER -->
+
+  <div class="video_cover">
+    <div class="container" style="padding-top:100px; text-align: center;">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <!-- loads iframe embed option as video player -->
+          <style>
+            .intrinsic-container {
+              position: relative;
+              height: 0;
+              overflow: hidden;
+            }
+
+            /* 16x9 Aspect Ratio */
+
+            .intrinsic-container-16x9 {
+              padding-bottom: 56.25%;
+            }
+
+            /* 4x3 Aspect Ratio */
+
+            .intrinsic-container-4x3 {
+              padding-bottom: 75%;
+            }
+
+            .intrinsic-container iframe {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+          </style>
+          <div class="intrinsic-container intrinsic-container-16x9">
+            <iframe src="https://drive.google.com/file/d/0B-2doJouk31PNXIybHJyeTNIWk0/preview"
+              allowfullscreen style="border:0px; width:100%; height:100%;"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- VIDEO DETAILS HERE -->
+  <div class="container" style="margin-top: 30px;">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- VIDEO TITLE -->
+            <h4>
+              Chappie</h4>
+            <!-- RATING CALCULATION -->
+            <div>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+
+        <!-- MOVIE GENRE -->
+        <div style="margin-top: 10px;">
+          <strong>Género</strong> :
+          <a href="../../suspenso.html">Ciencia Ficción,</a>
+          <a href="../../terror.html">Suspenso,</a>
+          <a href="../../accion.html">Acción</a>
+        </div>
+        <!-- MOVIE YEAR -->
+        <div>
+          <strong>Estreno</strong>: 26 de octubre de 2017 </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top:20px;">
+      <div class="col-lg-12">
+        <div class="bs-component">
+          <ul class="nav nav-tabs">
+            <li class="active" style="width:33%;">
+              <a href="#about" data-toggle="tab">
+                Acerca de
+              </a>
+            </li>
+            <li style="width:33%;">
+              <a href="#cast" data-toggle="tab">
+                Reparto
+              </a>
+            </li>
+            <li style="width:34%;">
+              <a href="#more" data-toggle="tab">
+                Peliculas Similares
+              </a>
+            </li>
+          </ul>
+          <div id="myTabContent" class="tab-content">
+            <!-- TAB FOR TITLE -->
+            <div class="tab-pane active in" id="about">
+              <p>
+                  Un asesino obliga a sus víctimas a participar en juegos macabros si quieren sobrevivir. La policía sospecha que sus crímenes están vinculados con el famoso asesino que murió 10 años antes, y que alguien dentro de la propia policía está implicado.
+              </p>
+            </div>
+            <!-- TAB FOR ACTORS -->
+            <div class="tab-pane " id="cast">
+              <p>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-3 col-xs-3">
+                      <div class="imgs">
+                        <a target="_blank" href="https://www.google.com.pe/search?q=Tobin+bell">
+                          <img alt="Tobin Bell es Jigsaw" width="60%"   src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAEgASAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAGAAIDBAUBB//EADMQAAIBAwMCBAQDCQEAAAAAAAECAwAEERIhMQVBEyJRYQYUcYFSscEjM0JicoKRocIy/8QAGAEAAwEBAAAAAAAAAAAAAAAAAQIDAAT/xAAeEQADAAIDAAMAAAAAAAAAAAAAAQIRIRIxQQMiUf/aAAwDAQACEQMRAD8A8+qVJvDiMaEByc5HY1DIdILYyFGasdBtfGb5h98nbNTOm9vBo2Vg9wBJOcZ7VtQdOgjx5AR2FPtkGMcVc047nJ96R0MoWCi9pAwwVjHtisu/6LHIjvakq34aIHRSRgU100kep3oKguUAzxuGMc66mHp2qIgbgUTdYsQ5WeEaW5PvQzcLpvCDt7VREl9aGNGrcqD9RSq2tpJJEHTzFs4Uc4Fco4ZbRTPmeaPUfNiiTpKhYlAHFDd6GhmBdGViM+Yds0QdGnymPelromtUENrHk7gA1dWNdWPTfFVINRVSBnerIkzgMeeKkUyXrmKIQgru3oBWfIoIGe3r2q9giPJORnIJaqkikEgN74ovsBnyKJNSHjihbrFi8VwJBuoO+KJmbRIfXj6VFPEJ4icDHqeKeSdfoO2t61uAugMB+XNKoZwBKwGNjjalVFbXRTgntkvxZ4k728zMC3gIWP1FN6FOEVGkzg7UKT9VvbiUNcTO2MDTwMelakNzI1usUUgjBOdR7Vq2QVLw9Dt71FiABB35FMlvEaEOWPhg/vPwn3oItunyXUui0vLqR8Z1BAFIxnI82cUTfCUckL3VpfESSLjfOQRjNSc42UVNnZOrXcxK2mhUXYySnCr965F1mEtpk6pD4vcGBwoP9RrQvumQyqZ4Ydb53QE4x9Kb09Yo5nk+XQSN/wCgFIz7b1lgLTEoZxrYgnHI4pjSfsJ41GWHAzitA6ERjpCFs5wuBWUhJunw2MkZoJ7C1ox+pRGOcBgASo4rla19AmsAgFlUBSTxkn9KVUmcrIeaWjzO2tmklRdJ1EjA4zRNLZQs0UGySFTketPGjxImZMOgyDTrqYFtSDzEYB9N+azrJFSkads15pAlyFx/E2aXSLtofiUBh5G7GobG8WWEaz+0GzD3ql1C6jtusRzNlQFG6/el9KdIOZz8vIzAkAHIwM7U4TwXLbyLkc71jP1uK9SNLHE91pxpJwB7n0FWLi0WSNGV9FwqjU6jZj7ilwPyReuWiQEKdR71jthHkYck5G1cUzs7LKoGP4lOQfpTmUF1Qnc4zWmdiVRWn8VZF+YwC8evfgjjb7jFdrX61CknwbbzsB40UreGx9NROPpv/qu10JYWifJegv1Tpdzbl43QB4ELFwdsVg2F2104BKjTuR3NKlRr41K0LNZotXCyxE3EGf5x+tVOo3GuQO27AYyO/pSpUiQ/yLZsfDzeAmqCzl8Zz5pWIVSPzx9qIVhklkxPdnA5EOw/zzSpUlDpaJJU+XgEaqxB4JNQxtqlZ+wGB9aVKlzoHpsfEREHwt062x5pgZP7SSR/zSpUq6KIdn//2Q==">
+                        </a>
+                      </div>
+                      <div class="data">
+                        <div class="name">
+                          <a target="_blank" href="https://www.google.com.pe/search?q=Tobin+bell">Tobin Bell</a>
+                        </div>
+                        <div class="caracter">
+                          <em>es Jigsaw</em>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-3">
+                      <div class="imgs">
+                        <a target="_blank" href="https://www.google.com.pe/search?q=Hannah+Anderson">
+                          <img alt="Hannah Anderson es Eleanor Bonneville" width="60%"   src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAEgASAMBIgACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAAAAQMEBQYHAgj/xAA3EAACAQMDAgMGAgkFAAAAAAABAgMABBEFEiExUQZBYRMUMnGRoQeBIiNCkrHB0eHwJDNSYnL/xAAYAQADAQEAAAAAAAAAAAAAAAABAgMEAP/EAB4RAAICAgMBAQAAAAAAAAAAAAABAhEDITFBUSIS/9oADAMBAAIRAxEAPwCoij60QpO4nW3iLsaYAdyyrCSTgAjk/OmUmpRr/sxvKflgfWkozNeNliNvauZZzGuE248j1+9ReTwrHH6THh7xXc6Lc3FyNL9uJbZ4NvtgMbsc9PLFR8OrRkhbiJ4T03N0qKkklfny9aXdWaxDSLjPwfKipMVwROkq8ZZSGUjqKt34mc+JIz3s4f4Gsw0y9a2lAY/q2PI7etWQP7QBt27PnnNUTsRqguKFHRUQBdBUBd3Bu7wJnEaGpbUp/d7Rm8zwtV23O6QDueaSb6KQXZZbG1M0SjGIvNf+VdHSZLu4Edum5idowKc6a26EBec9D6eZq7eELKPcs+3OOATWKTdmuCREad+GodVlvbhj/wBFGKc694ESfTlgs5RE8Y4yPirS42QdUBBpnfKMkAU1tdnUmecNR0260i8NteRlH8jjgjuO9ONKv/ZSCKRv0CcCtQ8daZb3WjTySoDJCu5HxyKxYyEkHz9KtCTZHJFLRdutCm9lLvt0L8Njn1oqunaM7VOiC1C7a5Rd3AB4FM4m2c+ZOaOZsKBSQPepsrEnrK/MMW1TzWmeFdU9z0qESWksnGS8RVupzyM5rNfC2ky6veiFDtUcs/XFaboPhE6cELSTZAO4iY4J7kZ+3Ss7qzSrSLbBeCWNXTO1hkZpjd65Ck5hEMsj+ZGAv1JpS3Cxrconwnp6VG6toBv0Hs5ZlUjn2cpTjzBwaVbC2IatJ7/ZzQPFtEkbDhgw+1YXLZzQRW8sgXbLu27WBOVODkeX51uGnaCmhWFwPeJZmclsSHOwdh/es28UpGNWt7KJQILNCP8A07Hc5+uB+VPCVOhJxtCcD/6aKNviC9O1CuIgWnfKgbVoVbG9EMq2VyYgufsKSdnXkqQOuaVcYk5qSvLZ/cASo2vEGBA88A0XJI5JtFt/Cy6SKGTf8TvwTWrRXSGA7VJOO9Y9+HpRYEjcgFiSvzB/vWkXlzcWdkk9nBHMB8amQqQO/Q5rPkX0zVjdxSFrK/t3juBJLiReqlSD9KkrW9jW2UzIcHoTxULb6k88aztFp+4Dhiz7h6fDSunXVzqLSNOkC2q8ZXJL/XypGU/DXIl4ivwls/sviwSKy68/X6nt67OXbNXvxbcxWlk7ADcxARf4VSoYPY2rs+TJKwHP+fnXWK9je5VorN5MEM7ADv3/AJUKc37CYBBztGaFWxvRmyK5FWuoiEV8HJXt0qwWF5C2hRRSLmTbg59OAfoPvQoUZ7QYcjB2e0ms7izmKKk+zZ027sZ4Pkcf1rSND16Nitte/oM3wP8Ast8j/KhQrpK0gQdFojsdNkG9sbj5d6aapqkFhE8cA3uq7iq/sjuewoUKklsu26M11K4utX1NWnYhSdoQdE9Pt1otRR0b2SeXAPbv/ShQqc39hhuGzrRbU30soxzuIH7wUUdChV4xshKTTP/Z">
+                        </a>
+                      </div>
+                      <div class="data">
+                        <div class="name">
+                          <a target="_blank" href="https://www.google.com.pe/search?q=Hannah+Anderson">Hannah Anderson</a>
+                        </div>
+                        <div class="caracter">
+                          <em>es Eleanor Bonneville</em>
+                        </div>
+                      </div>
+                    </div>
+                   <div class="col-sm-3 col-xs-3">
+                      <div class="imgs">
+                        <a target="_blank" href="https://www.google.com.pe/search?q=Laura+Vandervoort">
+                          <img alt="Laura Vandervoort es Anna" width="60%"   src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAEgASAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAFAAECBAYHA//EADUQAAIBAwMBBQYEBgMAAAAAAAECAwAEEQUSITETFCJBUQYHYXGBoVKRscEVcoLR4fAjMkP/xAAZAQADAQEBAAAAAAAAAAAAAAACAwQAAQX/xAAdEQACAwADAQEAAAAAAAAAAAAAAQIDESExQSIS/9oADAMBAAIRAxEAPwDoVKnxT4owSND9U1rTtJA7/dJExHC9WP0FL2j1P+EaTNdqqtIOEDdCTXEr0z6teG6uZHKAZZupY56feglPA4x06UvvJ0NpmjEd4QGwGEQIPx61p9P1C01O37xYzrNHnBI6g+hHlXBLvR5njKoWUKC2COOvnRb2P1ufQbxNz7Yif+SMt/2Hx+NCrAnWduNRNRtp0ubeOeI5R1DDnNTNMFkCKVSpqxizSp6VYxi/ejKY9JtEMYdZJyCCSOcfD60N0DQbaOCJnQM48QB5Ck0d94Vutxp1kGHS8Xn0yCKp22p21kyx3GUzwPEpJ/pzn7VNdrZTTmF+TSYNu4wISRzxWN9rtGiFq00KbZEOfCMcV0G61C2hsO8SyHsQuQQpJI+VZO61K01NXjieJtwwUEoZwD5kDp+dJxp6h7aaxl33a33b6P3Zh4o/ED8Dx+1a81ivd7EY5bkKvgCAfXJrbGrYPYkU1kiBpU5pUQBYpi4qDHJphXTAz2nhFzpoGMmOQSflmg1lodhdXa36Ros23DHaPFxjJ+hNaW9TtIWQ+YoLeB7S+ODhZRuA8v8Ac0i1NfSH0tP5Z6NBC8AieMGEuy4PTpiqF/YWelwPOiAusWxCTnao5wPSn75hubVjJuyF7TjPrih+u3qblhkYbn4Kg9PWp030UtZyy/7F2rwXF2ucrHtUt68ZP3rVmh+iW/YQE7drOAW+eBmiJqyCxYQyevSBpU5pUQI9PQrVdUNrItvbKHnYZOeij+9UXvdSKFXkIz+BQD+lLldGLwZGmUlp6QpdWt7e94uEWzLMyFmJbcdpH69PhVFXmnkVbieWdUztZwAw+PFD9bjdbLv0jkyWci3G5xk7VPi5/kLCjCsUJdou0H4oz+1Istclx0PrqUXyQme/SNo4e7sMcOyn7j/NBoLWGLW7R7hTKgkzM7dSSDz8gccelaFbmF5EU5QNx4hjmhV8BFcjKnhsg46ilqWPRrjqw1kt1HDFKY1aZkzlIhuO7rt48+a8dJN3JbtPf5SWViRD5Rr0ArJds0lwbJQTbSntxHnHiBG4ZHIB4P50ettciiRYntpECjGBJvP3qpXR9JHTPwOGlXhb3UN1F2kDhl6H1B9CKVNFvgz1ie83kl2/PaOSPl5fai8gQjoKVKvP75L+uClOkU0UkcoHZlSGz0x50L9m7+O90iCS3uY7h4h2UrIcjevBP1xn5EU1KiS+GzjeTSL1zKsoCumGByCKryuWRUbxbehPWnpUsaD7siCW1ul4CTqr/EN4P1YUUKRSnPQ0qVF4B6V4bz+GalGf/KZhHIPmeD9KVKlVFMn+cJr4r9af/9k=">
+                        </a>
+                      </div>
+                      <div class="data">
+                        <div class="name">
+                          <a target="_blank" href="https://www.google.com.pe/search?q=Laura+Vandervoort">Laura Vandervoort</a>
+                        </div>
+                        <div class="caracter">
+                          <em>es Anna</em>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-3">
+                      <div class="imgs">
+                        <a target="_blank" href="https://www.google.com.pe/search?q=Matt+Passmore">
+                          <img alt="Matt Passmore es Logan Nelson" width="60%"   src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAEgASAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAFAAEEBgcDAgj/xAA4EAACAQMCAgYGCQUBAAAAAAABAgMABBEFIRIxBgcTQVFhFCIjcaGxMkJSU4GRwdHwFiQ0cvEV/8QAGgEAAgMBAQAAAAAAAAAAAAAABAYCAwUBAP/EACERAAICAgICAwEAAAAAAAAAAAECAAMEERIhMUEUIlET/9oADAMBAAIRAxEAPwC7oeEZNNknfxryGzXqt2L+5ymlSGMvK6oi82Y4AoNcdKNHhUn01Jcfc+v8qqHWBqbz6n6K5Po0JwE7mPefhVQu7kSKoTbHIDkBWfdmlW4qJpU4CsoZzNKuOsHToXxHb3Ei/a2X4VJj6eaOwVn9JRW2z2eQD+BrIxHI8JcNsOfENqjG4K8gMjljlVHzbdwn4FOvc37T9Y0/U/8ACuo5GxnhzhvyO9TQN6+dILyWO4SVJWR1OzKcYrSOhnTqRp0sNafjVjiK6PMHwb96KpzAx4t0YFfhFByQ7E063BzTV7h50qvbzBkPUgrQjpRqjabZx8DhGlbhz5Y7qMrgVQ+syK4mvdIWI+zbtB7j6v6V7JYrUxE7iKHuUGBlsJdaLukZkBO7Y55864f0ZeRBjIoIzsc1oOi2CWdpHABuAOI+JqfJEuCARSx/RtxvFK67mOXeh3UZK8BYD6oHI/tQa5sZISVeIr5nvrXtRjRASQM+NUnX1ViwG9TW47kHxxrYlMlTgbCjA7q6QvsdyPxrvcRZ2FQ3BifBogHkIE66m2dWnSl9Zt2069P97aoDx/epyB942zSqg9WU0n9Y2PZkjiDg4714SSD5bfnilWrjuXrBMxclAlnU2TNA+mNo9xpsUsW7W06yH/XkfnRyud2vaW0qAbshHwou1QyEGC0uUsVhOMLREnEg286eTYjLAiq5rjXq4itNOidFYDtml4SNufur3YPcy2Mktwez7PYHOQceFKhXQ3HcNyOp11dVwVGM+VU/UYS4YmoFzrWp6lqJtrYPniI9mCTz50tTAt4pIib7tEOGZ19XPf8A95V0VHzIm4eIIuIwJWA8aF3gw+KnxSlzhjk+NQr0e3ara9htQS47HUt/VDA79Ku1VMrFbuWY/VzgD+e+mrp1S6oLHXjYvGCL4cIbvUqGYfrT1tYujX1F/ODC3uavTnlTUzfRPuo198TqBV65jf7It1FEYybhU7Mcy/KgfSm6Wz0F2tlChhhdsfCp0qm9u0EreyjOeHxNBumtvfXdolvZurMxOEbb40ohNx8LgSo9EhxaiyMSkzrlD9od9HNa0tbgA3DSADwbaqfBJq0F7Dxho5IGwrY5VctTvxLZdoMn1dzjvqbhh4lacSO5VL2xtrdgISSc0Iu4WExfGxG1SmuDJLxN414v2+i2cLjJrq73BrNEwz1a2cl10ts2UbW/HM58gpHzIpVpPQPQE0XSlmlTF7dKGmbwHcv4fOmpgxqjXXo+YtZ2QLLfr4HUNU/OlSo2A71BEts8txwrIYuDc8IG9QNTIhi4l1H2yjbjQHh+VKlStYoWwgfseKGL1Kx9gTOtTN3LdmOC6aeRzyWIDNF5If8Azujh9NuO1n4SqheQGdh509Kok+p70TKcCfjVw6EdGE193ubmTht7aRAVA+n34/njSpUZiIrXDczM+xkpJWa8MAUqVKtuLO5//9k=">
+                        </a>
+                      </div>
+                      <div class="data">
+                        <div class="name">
+                          <a target="_blank" href="https://www.google.com.pe/search?q=Matt+Passmore">Matt Passmore</a>
+                        </div>
+                        <div class="caracter">
+                          <em>es Logan Nelson</em>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 col-xs-3">
+                          <div class="imgs">
+                            <a target="_blank" href="https://www.google.com.pe/search?q=Tobin+bell">
+                              <img alt="Tobin Bell es Jigsaw" width="60%"   src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAEgASAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAGAAIDBAUBB//EADMQAAIBAwMCBAQDCQEAAAAAAAECAwAEERIhMQVBEyJRYQYUcYFSscEjM0JicoKRocIy/8QAGAEAAwEBAAAAAAAAAAAAAAAAAQIDAAT/xAAeEQADAAIDAAMAAAAAAAAAAAAAAQIRIRIxQQMiUf/aAAwDAQACEQMRAD8A8+qVJvDiMaEByc5HY1DIdILYyFGasdBtfGb5h98nbNTOm9vBo2Vg9wBJOcZ7VtQdOgjx5AR2FPtkGMcVc047nJ96R0MoWCi9pAwwVjHtisu/6LHIjvakq34aIHRSRgU100kep3oKguUAzxuGMc66mHp2qIgbgUTdYsQ5WeEaW5PvQzcLpvCDt7VREl9aGNGrcqD9RSq2tpJJEHTzFs4Uc4Fco4ZbRTPmeaPUfNiiTpKhYlAHFDd6GhmBdGViM+Yds0QdGnymPelromtUENrHk7gA1dWNdWPTfFVINRVSBnerIkzgMeeKkUyXrmKIQgru3oBWfIoIGe3r2q9giPJORnIJaqkikEgN74ovsBnyKJNSHjihbrFi8VwJBuoO+KJmbRIfXj6VFPEJ4icDHqeKeSdfoO2t61uAugMB+XNKoZwBKwGNjjalVFbXRTgntkvxZ4k728zMC3gIWP1FN6FOEVGkzg7UKT9VvbiUNcTO2MDTwMelakNzI1usUUgjBOdR7Vq2QVLw9Dt71FiABB35FMlvEaEOWPhg/vPwn3oItunyXUui0vLqR8Z1BAFIxnI82cUTfCUckL3VpfESSLjfOQRjNSc42UVNnZOrXcxK2mhUXYySnCr965F1mEtpk6pD4vcGBwoP9RrQvumQyqZ4Ydb53QE4x9Kb09Yo5nk+XQSN/wCgFIz7b1lgLTEoZxrYgnHI4pjSfsJ41GWHAzitA6ERjpCFs5wuBWUhJunw2MkZoJ7C1ox+pRGOcBgASo4rla19AmsAgFlUBSTxkn9KVUmcrIeaWjzO2tmklRdJ1EjA4zRNLZQs0UGySFTketPGjxImZMOgyDTrqYFtSDzEYB9N+azrJFSkads15pAlyFx/E2aXSLtofiUBh5G7GobG8WWEaz+0GzD3ql1C6jtusRzNlQFG6/el9KdIOZz8vIzAkAHIwM7U4TwXLbyLkc71jP1uK9SNLHE91pxpJwB7n0FWLi0WSNGV9FwqjU6jZj7ilwPyReuWiQEKdR71jthHkYck5G1cUzs7LKoGP4lOQfpTmUF1Qnc4zWmdiVRWn8VZF+YwC8evfgjjb7jFdrX61CknwbbzsB40UreGx9NROPpv/qu10JYWifJegv1Tpdzbl43QB4ELFwdsVg2F2104BKjTuR3NKlRr41K0LNZotXCyxE3EGf5x+tVOo3GuQO27AYyO/pSpUiQ/yLZsfDzeAmqCzl8Zz5pWIVSPzx9qIVhklkxPdnA5EOw/zzSpUlDpaJJU+XgEaqxB4JNQxtqlZ+wGB9aVKlzoHpsfEREHwt062x5pgZP7SSR/zSpUq6KIdn//2Q==">
+                            </a>
+                          </div>
+                          <div class="data">
+                            <div class="name">
+                              <a target="_blank" href="https://www.google.com.pe/search?q=Tobin+bell">Tobin Bell</a>
+                            </div>
+                            <div class="caracter">
+                              <em>es Jigsaw</em>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-3">
+                          <div class="imgs">
+                            <a target="_blank" href="https://www.google.com.pe/search?q=Hannah+Anderson">
+                              <img alt="Hannah Anderson es Eleanor Bonneville" width="60%"   src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAEgASAMBIgACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAAAAQMEBQYHAgj/xAA3EAACAQMDAgMGAgkFAAAAAAABAgMABBEFEiExUQZBYRMUMnGRoQeBIiNCkrHB0eHwJDNSYnL/xAAYAQADAQEAAAAAAAAAAAAAAAABAgMEAP/EAB4RAAICAgMBAQAAAAAAAAAAAAABAhEDITFBUSIS/9oADAMBAAIRAxEAPwCoij60QpO4nW3iLsaYAdyyrCSTgAjk/OmUmpRr/sxvKflgfWkozNeNliNvauZZzGuE248j1+9ReTwrHH6THh7xXc6Lc3FyNL9uJbZ4NvtgMbsc9PLFR8OrRkhbiJ4T03N0qKkklfny9aXdWaxDSLjPwfKipMVwROkq8ZZSGUjqKt34mc+JIz3s4f4Gsw0y9a2lAY/q2PI7etWQP7QBt27PnnNUTsRqguKFHRUQBdBUBd3Bu7wJnEaGpbUp/d7Rm8zwtV23O6QDueaSb6KQXZZbG1M0SjGIvNf+VdHSZLu4Edum5idowKc6a26EBec9D6eZq7eELKPcs+3OOATWKTdmuCREad+GodVlvbhj/wBFGKc694ESfTlgs5RE8Y4yPirS42QdUBBpnfKMkAU1tdnUmecNR0260i8NteRlH8jjgjuO9ONKv/ZSCKRv0CcCtQ8daZb3WjTySoDJCu5HxyKxYyEkHz9KtCTZHJFLRdutCm9lLvt0L8Njn1oqunaM7VOiC1C7a5Rd3AB4FM4m2c+ZOaOZsKBSQPepsrEnrK/MMW1TzWmeFdU9z0qESWksnGS8RVupzyM5rNfC2ky6veiFDtUcs/XFaboPhE6cELSTZAO4iY4J7kZ+3Ss7qzSrSLbBeCWNXTO1hkZpjd65Ck5hEMsj+ZGAv1JpS3Cxrconwnp6VG6toBv0Hs5ZlUjn2cpTjzBwaVbC2IatJ7/ZzQPFtEkbDhgw+1YXLZzQRW8sgXbLu27WBOVODkeX51uGnaCmhWFwPeJZmclsSHOwdh/es28UpGNWt7KJQILNCP8A07Hc5+uB+VPCVOhJxtCcD/6aKNviC9O1CuIgWnfKgbVoVbG9EMq2VyYgufsKSdnXkqQOuaVcYk5qSvLZ/cASo2vEGBA88A0XJI5JtFt/Cy6SKGTf8TvwTWrRXSGA7VJOO9Y9+HpRYEjcgFiSvzB/vWkXlzcWdkk9nBHMB8amQqQO/Q5rPkX0zVjdxSFrK/t3juBJLiReqlSD9KkrW9jW2UzIcHoTxULb6k88aztFp+4Dhiz7h6fDSunXVzqLSNOkC2q8ZXJL/XypGU/DXIl4ivwls/sviwSKy68/X6nt67OXbNXvxbcxWlk7ADcxARf4VSoYPY2rs+TJKwHP+fnXWK9je5VorN5MEM7ADv3/AJUKc37CYBBztGaFWxvRmyK5FWuoiEV8HJXt0qwWF5C2hRRSLmTbg59OAfoPvQoUZ7QYcjB2e0ms7izmKKk+zZ027sZ4Pkcf1rSND16Nitte/oM3wP8Ast8j/KhQrpK0gQdFojsdNkG9sbj5d6aapqkFhE8cA3uq7iq/sjuewoUKklsu26M11K4utX1NWnYhSdoQdE9Pt1otRR0b2SeXAPbv/ShQqc39hhuGzrRbU30soxzuIH7wUUdChV4xshKTTP/Z">
+                            </a>
+                          </div>
+                          <div class="data">
+                            <div class="name">
+                              <a target="_blank" href="https://www.google.com.pe/search?q=Hannah+Anderson">Hannah Anderson</a>
+                            </div>
+                            <div class="caracter">
+                              <em>es Eleanor Bonneville</em>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-3">
+                          <div class="imgs">
+                            <a target="_blank" href="https://www.google.com.pe/search?q=Laura+Vandervoort">
+                              <img alt="Laura Vandervoort es Anna" width="60%"   src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAEgASAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAFAAECBAYHA//EADUQAAIBAwMBBQYEBgMAAAAAAAECAwAEEQUSITETFCJBUQYHYXGBoVKRscEVcoLR4fAjMkP/xAAZAQADAQEBAAAAAAAAAAAAAAACAwQAAQX/xAAdEQACAwADAQEAAAAAAAAAAAAAAQIDESExQSIS/9oADAMBAAIRAxEAPwDoVKnxT4owSND9U1rTtJA7/dJExHC9WP0FL2j1P+EaTNdqqtIOEDdCTXEr0z6teG6uZHKAZZupY56feglPA4x06UvvJ0NpmjEd4QGwGEQIPx61p9P1C01O37xYzrNHnBI6g+hHlXBLvR5njKoWUKC2COOvnRb2P1ufQbxNz7Yif+SMt/2Hx+NCrAnWduNRNRtp0ubeOeI5R1DDnNTNMFkCKVSpqxizSp6VYxi/ejKY9JtEMYdZJyCCSOcfD60N0DQbaOCJnQM48QB5Ck0d94Vutxp1kGHS8Xn0yCKp22p21kyx3GUzwPEpJ/pzn7VNdrZTTmF+TSYNu4wISRzxWN9rtGiFq00KbZEOfCMcV0G61C2hsO8SyHsQuQQpJI+VZO61K01NXjieJtwwUEoZwD5kDp+dJxp6h7aaxl33a33b6P3Zh4o/ED8Dx+1a81ivd7EY5bkKvgCAfXJrbGrYPYkU1kiBpU5pUQBYpi4qDHJphXTAz2nhFzpoGMmOQSflmg1lodhdXa36Ros23DHaPFxjJ+hNaW9TtIWQ+YoLeB7S+ODhZRuA8v8Ac0i1NfSH0tP5Z6NBC8AieMGEuy4PTpiqF/YWelwPOiAusWxCTnao5wPSn75hubVjJuyF7TjPrih+u3qblhkYbn4Kg9PWp030UtZyy/7F2rwXF2ucrHtUt68ZP3rVmh+iW/YQE7drOAW+eBmiJqyCxYQyevSBpU5pUQI9PQrVdUNrItvbKHnYZOeij+9UXvdSKFXkIz+BQD+lLldGLwZGmUlp6QpdWt7e94uEWzLMyFmJbcdpH69PhVFXmnkVbieWdUztZwAw+PFD9bjdbLv0jkyWci3G5xk7VPi5/kLCjCsUJdou0H4oz+1Istclx0PrqUXyQme/SNo4e7sMcOyn7j/NBoLWGLW7R7hTKgkzM7dSSDz8gccelaFbmF5EU5QNx4hjmhV8BFcjKnhsg46ilqWPRrjqw1kt1HDFKY1aZkzlIhuO7rt48+a8dJN3JbtPf5SWViRD5Rr0ArJds0lwbJQTbSntxHnHiBG4ZHIB4P50ettciiRYntpECjGBJvP3qpXR9JHTPwOGlXhb3UN1F2kDhl6H1B9CKVNFvgz1ie83kl2/PaOSPl5fai8gQjoKVKvP75L+uClOkU0UkcoHZlSGz0x50L9m7+O90iCS3uY7h4h2UrIcjevBP1xn5EU1KiS+GzjeTSL1zKsoCumGByCKryuWRUbxbehPWnpUsaD7siCW1ul4CTqr/EN4P1YUUKRSnPQ0qVF4B6V4bz+GalGf/KZhHIPmeD9KVKlVFMn+cJr4r9af/9k=">
+                            </a>
+                          </div>
+                          <div class="data">
+                            <div class="name">
+                              <a target="_blank" href="https://www.google.com.pe/search?q=Laura+Vandervoort">Laura Vandervoort</a>
+                            </div>
+                            <div class="caracter">
+                              <em>es Anna</em>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-3">
+                          <div class="imgs">
+                            <a target="_blank" href="https://www.google.com.pe/search?q=Matt+Passmore">
+                              <img alt="Matt Passmore es Logan Nelson" width="60%"   src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAEgASAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAFAAEEBgcDAgj/xAA4EAACAQMCAgYGCQUBAAAAAAABAgMABBEFIRIxBgcTQVFhFCIjcaGxMkJSU4GRwdHwFiQ0cvEV/8QAGgEAAgMBAQAAAAAAAAAAAAAABAYCAwUBAP/EACERAAICAgICAwEAAAAAAAAAAAECAAMEERIhMUEUIlET/9oADAMBAAIRAxEAPwC7oeEZNNknfxryGzXqt2L+5ymlSGMvK6oi82Y4AoNcdKNHhUn01Jcfc+v8qqHWBqbz6n6K5Po0JwE7mPefhVQu7kSKoTbHIDkBWfdmlW4qJpU4CsoZzNKuOsHToXxHb3Ei/a2X4VJj6eaOwVn9JRW2z2eQD+BrIxHI8JcNsOfENqjG4K8gMjljlVHzbdwn4FOvc37T9Y0/U/8ACuo5GxnhzhvyO9TQN6+dILyWO4SVJWR1OzKcYrSOhnTqRp0sNafjVjiK6PMHwb96KpzAx4t0YFfhFByQ7E063BzTV7h50qvbzBkPUgrQjpRqjabZx8DhGlbhz5Y7qMrgVQ+syK4mvdIWI+zbtB7j6v6V7JYrUxE7iKHuUGBlsJdaLukZkBO7Y55864f0ZeRBjIoIzsc1oOi2CWdpHABuAOI+JqfJEuCARSx/RtxvFK67mOXeh3UZK8BYD6oHI/tQa5sZISVeIr5nvrXtRjRASQM+NUnX1ViwG9TW47kHxxrYlMlTgbCjA7q6QvsdyPxrvcRZ2FQ3BifBogHkIE66m2dWnSl9Zt2069P97aoDx/epyB942zSqg9WU0n9Y2PZkjiDg4714SSD5bfnilWrjuXrBMxclAlnU2TNA+mNo9xpsUsW7W06yH/XkfnRyud2vaW0qAbshHwou1QyEGC0uUsVhOMLREnEg286eTYjLAiq5rjXq4itNOidFYDtml4SNufur3YPcy2Mktwez7PYHOQceFKhXQ3HcNyOp11dVwVGM+VU/UYS4YmoFzrWp6lqJtrYPniI9mCTz50tTAt4pIib7tEOGZ19XPf8A95V0VHzIm4eIIuIwJWA8aF3gw+KnxSlzhjk+NQr0e3ara9htQS47HUt/VDA79Ku1VMrFbuWY/VzgD+e+mrp1S6oLHXjYvGCL4cIbvUqGYfrT1tYujX1F/ODC3uavTnlTUzfRPuo198TqBV65jf7It1FEYybhU7Mcy/KgfSm6Wz0F2tlChhhdsfCp0qm9u0EreyjOeHxNBumtvfXdolvZurMxOEbb40ohNx8LgSo9EhxaiyMSkzrlD9od9HNa0tbgA3DSADwbaqfBJq0F7Dxho5IGwrY5VctTvxLZdoMn1dzjvqbhh4lacSO5VL2xtrdgISSc0Iu4WExfGxG1SmuDJLxN414v2+i2cLjJrq73BrNEwz1a2cl10ts2UbW/HM58gpHzIpVpPQPQE0XSlmlTF7dKGmbwHcv4fOmpgxqjXXo+YtZ2QLLfr4HUNU/OlSo2A71BEts8txwrIYuDc8IG9QNTIhi4l1H2yjbjQHh+VKlStYoWwgfseKGL1Kx9gTOtTN3LdmOC6aeRzyWIDNF5If8Azujh9NuO1n4SqheQGdh509Kok+p70TKcCfjVw6EdGE193ubmTht7aRAVA+n34/njSpUZiIrXDczM+xkpJWa8MAUqVKtuLO5//9k=">
+                            </a>
+                          </div>
+                          <div class="data">
+                            <div class="name">
+                              <a target="_blank" href="https://www.google.com.pe/search?q=Matt+Passmore">Matt Passmore</a>
+                            </div>
+                            <div class="caracter">
+                              <em>es Logan Nelson</em>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </p>
+              </div>
+              <!-- TAB FOR SAME CATEGORY MOVIES -->
+              <div class="tab-pane  " id="more">
+                <p>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-3 col-xs-6">
+                        <div>
+                          <div id="vi" onclick="location.href='categorias/superheroes/veronica';" class="imageBox">
+                            <img src="../../images/18.jpg" class="img-fluid">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-3 col-xs-6">
+                        <div>
+                          <div id="vi" onclick="location.href='categorias/superheroes/veronica';" class="imageBox">
+                            <img src="../../images/17.jpg" class="img-fluid">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-3 col-xs-6">
+                        <div>
+                          <div id="vi" onclick="location.href='categorias/superheroes/veronica';" class="imageBox">
+                            <img src="../../images/13.jpg" class="img-fluid">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-3 col-xs-6">
+                        <div>
+                          <div id="vi" onclick="location.href='categorias/superheroes/veronica';" class="imageBox">
+                            <img src="../../images/14.jpg" class="img-fluid">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr style="border-top:1px solid #333;">
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="list-unstyled">
+              <li>
+                <a target="_blank" href="../../code/faq.html">FAQ</a>
+              </li>
+              <li>
+                <a target="_blank" href="../../code/politicas-seguridad.html">Políticas de Privacidad</a>
+              </li>
+              <li>
+                <a target="_blank" href="../../code/politicas-rembolso.html">Políticas de Rembolso</a>
+              </li>
+            </ul>
+            <center>
+              <p>Hecho con
+                <i class="fa fa-heart"></i> por
+                <a href="#">Code Chappie</a>. Contactanos a
+                <a href="mailto:davidproyecto01@gmail.com">davidproyecto01@gmail.com</a>.</p>
+            </center>
+          </div>
+        </div>
+      </footer>
+    </div>
+</body>
+
+</html>
