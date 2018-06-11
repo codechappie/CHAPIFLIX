@@ -7,158 +7,126 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Luckiest+Guy" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Luckiest+Guy" rel="stylesheet">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="css/boo.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/per.css">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
   <link rel="stylesheet" type="text/css" href="slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
-  <link rel="stylesheet" href="css/estilo.css">
-  <link rel="stylesheet" href="css/fleximageBoxgrid.min.css">
-  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
   <title>CHAPIFLIX</title>
 </head>
 
 <body>
 
 
-  
-<nav id="menu" class="navbar navbar-expand-sm sticky-top">
-  <a href="http://www.chapiflix.gq">
-    <img border="0" height="30" width="30" src="images/atras.png" />
-  </a>
-  <a href="http://www.chapiflix.gq/kids">
-    <img border="0" height="30" width="150" src="images/logkids.png" />
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-    aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon">
-      <img border="0" height="30" width="30" src="images/abajo.png" />
-    </span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="genero" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Género
+  <div class="navbar navbar-default navbar-fixed-top nav_transparent">
+    <div class="container" style=" width: 100%;">
+      <div class="navbar-header">
+        <a href="index.html" class="navbar-brand">
+          <img src="images/log2.png" style="padding: 0; height: 23px;margin: 0px;" />
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Acción</a>
-          <a class="dropdown-item" href="#">Comedia</a>
-          <a class="dropdown-item" href="#">Terror</a>
-          <a class="dropdown-item" href="#">Ciencia Ficción</a>
-          <a class="dropdown-item" href="#">Aventura</a>
-          <a class="dropdown-item" href="#">Suspenso</a>
-          <a class="dropdown-item" href="#">Romance</a>
-          <a class="dropdown-item" href="#">Fantasía</a>
-          <a class="dropdown-item" href="#">Drama</a>
-          <a class="dropdown-item" href="#">Crimen</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Peliculas por año</a>
-        </div>
-      </li>
-      <li class="nav-item">
-
-        <a id="kids" class="nav-link" href="http://www.chapiflix.gq/kids">KIDS</a>
-      </li>
-      <li class="nav-item">
-        <a id="contenido" class="nav-link" href="#">ESTRENOS</a>
-      </li>
-      
-      
-      <li class="nav-item">
-          <a id="genero" class="nav-link" target="_blank" href="https://www.paypal.me/CanalesAlcalde/1">Donar</a>
-        </li>
-    </ul>
- 
-  
-        <li class="nav-item dropdown">
-         
-            <div class="btn-group">
-
-                <a id="genero" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                 <img src="images/user.png" width="15%" alt=""> CodeChappie
-                </a>
-                <div class="dropdown-menu dropdown-menu-right">
-                  <button class="dropdown-item" type="button">Mi perfil</button>
-                  <div class="dropdown-divider"></div>
-                  <button class="dropdown-item" type="button">Cerrar Sessión</button>
-                </div>
-              </div>
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse" id="navbar-main">
+        <ul class="nav navbar-nav">
+          <!-- MOVIES GENRE WISE-->
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="" style="color: #e50914; font-weight: bold;">
+              Género
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="themes">
+              <li>
+                <a href="#">
+                  Acción </a>
+              </li>
+              <li>
+                <a href="#">
+                  Comedia </a>
+              </li>
+              <li>
+                <a href="#">
+                  Terror </a>
+              </li>
+              <li>
+                <a href="#">
+                  Ciencia Ficción </a>
+              </li>
+              <li>
+                <a href="#">
+                  Superheroes </a>
+              </li>
+              <li>
+                <a href="#">
+                  Suspenso </a>
+              </li>
+              <li>
+                <a href="#">
+                  Romance </a>
+              </li>
+              <li>
+                <a href="#">
+                  Drama </a>
+              </li>
+              <li>
+                <a href="#">
+                  Crimen </a>
+              </li>
+              <div class="dropdown-divider"></div>
+              <li>
+                <a href="#">
+                  Peliculas por año </a>
+              </li>
+            </ul>
           </li>
-   
-  </div>
-
-</nav>
-
-  <section>
-
-    <div class="container-fluid">
-
-
-
-      <div class="center slider">
-
-        <div>
-          <div id="vi" onclick="location.href='veronica.html  ';" class="imageBox2">
-            <img src="images/7.jpg" class="img-fluid">
-
+          <!-- MY LIST -->
+          <li>
+            <a target="_blank" href="https://www.paypal.me/CanalesAlcalde/1">Donar</a>
+          </li>
+        </ul>
+        <!-- PROFILE, ACCOUNT SECTION -->
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="padding:10px;">
+              <img src="images/user.png" style="height:30px;" /> Chappie
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="themes">
+              <!--<li class="divider"></li>-->
+              <!-- SHOW ADMIN LINK IF ADMIN LOGGED IN -->
+              <li>
+                <a href="#">Perfil</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="home.html">Cerrar sessión</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- SEARCH FORM -->
+        <form class="navbar-form navbar-right" method="post" action="#">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Peliculas y series" style="background-color: #000; border: 1px solid #0a0a0a;"
+              name="search_key">
           </div>
-        </div>
-
-        <div>
-          <div id="vi" onclick="location.href='Benji.html  ';" class="imageBox2">
-            <img src="images/8.jpg" class="img-fluid">
-
-          </div>
-        </div>
-        <div>
-
-          <div id="vi" onclick="location.href='baywatch.html';" class="imageBox2">
-            <img src="images/12.jpg" class="img-fluid">
-
-          </div>
-        </div>
-        <div>
-
-          <div id="vi" onclick="location.href='emoji.html';" class="imageBox2">
-            <img src="images/21.jpg" class="img-fluid">
-
-          </div>
-        </div>
-        <div>
-          <div id="vi" onclick="location.href='Extraordinario.html';" class="imageBox2">
-            <img src="images/benji.jpg" class="img-fluid">
-
-          </div>
-        </div>
-        <div>
-
-          <div id="vi" onclick="location.href='CuandoNosComocimos.html';" class="imageBox2">
-            <img src="images/6.jpg" class="img-fluid">
-
-          </div>
-        </div>
-        <div>
-
-          <div id="vi" onclick="location.href='CuandoNosComocimos.html';" class="imageBox2">
-            <img src="images/7.jpg" class="img-fluid">
-
-          </div>
-        </div>
-        <div>
-
-          <div id="vi" onclick="location.href='CuandoNosComocimos.html';" class="imageBox2">
-            <img src="images/8.jpg" class="img-fluid">
-
-          </div>
-        </div>
-
+          <button type="submit" class="btn btn-default">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </form>
       </div>
     </div>
-  </section>
+  </div>
 
+  
 
-  <section>
+  <section class="kids">
 
     <div class="container-fluid">
 

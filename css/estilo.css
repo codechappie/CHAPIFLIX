@@ -63,11 +63,11 @@ a:hover {
   border-radius: 6px;
 }
 .dropdown-item {
-  color: #ef0808;
+  color: #ffffff;
   font-size: 0.9rem;
 }
 .dropdown-item a{
-  color: #ef0808;
+  color: #ffffff;
 }
 .card {
   background: black;
@@ -106,11 +106,22 @@ a:hover {
   margin: 8px;
   margin-left: 0;
 }
+.kids{
+  
+}
 .bo{
   width: 100%;
   display: inline-block;
 }
-
+.imgs{
+  margin-left: 0;
+  margin: 32px;
+  margin-bottom: 0;
+}
+.imgs img{
+  border-radius: 100%;
+  width: 30%;
+}
 /*SecccionVideos*/
 
 .imageBox {
@@ -168,6 +179,9 @@ h2 {
 #vi {
   text-decoration: none;
   cursor: pointer;
+}
+#vi img{
+width: 100%;
 }
 #menu {
   background: #000;

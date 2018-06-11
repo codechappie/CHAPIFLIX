@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+	<title>Bienvenido | Chapiflix</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="stylesheet" href="css/boo.css" media="screen">
+    <link rel="stylesheet" href="css/per.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <style>
+		.black_text{color:#000; background-color: #f3f3f3;}
+    .blue_text{color: #0080ff;}
+    body::-webkit-scrollbar {
+  width: 4px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #a50000;
+  border-radius: 29px;
+}
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyD5bb4Hcyk1flQ682kAUyvpE3Ybw1gEwHE",
+        authDomain: "chapiflix.firebaseapp.com",
+        databaseURL: "https://chapiflix.firebaseio.com",
+        projectId: "chapiflix",
+        storageBucket: "chapiflix.appspot.com",
+        messagingSenderId: "262242251167"
+      };
+      firebase.initializeApp(config);
+    </script>
+<script src="js/auth.js"></script>
+</head>
+<body style="background-color:#000;">
+	<!-- TOP LANDING SECTION -->
+<div style="height: 70vh;width:97vw;background-image: url(https://pelisvip.co/assets/frontend/flixer/images/login_bg.jpg);  background-origin: inherit; background-size: cover; background-repeat: no-repeat; background-position: center;">
+	<!-- logo -->
+	<div style="float: left;">
+		<a href="index.html">
+		<img src="images/log2.png" style="margin: 18px 40px; height: 50px;" />
+		</a>
+	</div>
+	<div class="row">
+		<div class="col-lg-4 col-lg-offset-4" style="clear: both;">
+			<div style="background-color: #f3f3f3; padding: 30px;">
+	            <form id="form-autentication">
+					<h3 class="black_text">Sign in</h3>
+					<div class="black_text">
+						Email 
+					</div>
+					<div class="black_text">
+						<input type="email" id="email_field" style="padding: 10px; width:100%;" />
+					</div>
+					<div class="black_text"  style="margin-top: 20px;">
+						Password
+					</div>
+					<div class="black_text">
+						<input type="password" id="password_field" style="padding: 10px; width:100%;" />
+					</div>
+					<button type="submit" onclick="login()" class="btn btn-danger" style=" width: 100%; margin: 20px 0px;"> Sign in </button>
+                    <hr>
+                    <a href="https://pelisvip.co/index.php?home/forget">Forget password?</a>
+                    |
+                    <a href="https://pelisvip.co/index.php?home/signup">Sign up</a>
+                </div>
+               
+            
+            </form>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- MIDDLE TAB SECTION -->
+<div class="container">
+	<footer>
+	<div class="row">
+		<div class="col-lg-12">
+			<ul class="list-unstyled">  
+				<li><a href="faq.html">FAQ</a></li>
+				<li><a href="politicas-seguridad.html">Políticas de Privacidad</a></li>
+				<li><a href="politicas-rembolso.html">Políticas de Rembolso</a></li>
+			</ul>
+			<center><p>Hecho con <i class="fa fa-heart"></i> por <a href="#">Code Chappie</a>. Contactanos a <a href="mailto:davidproyecto01@gmail.com">davidproyecto01@gmail.com</a>.</p></center>
+		</div>
+	</div>
+</footer></div>
+
+<script src="js/jq.js" ></script>
+<script src="js/bjs.js" ></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
